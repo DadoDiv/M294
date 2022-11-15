@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+    </head>
+
+    <body>
+
+        <div id="mein-div">TEXT</div>
+
+        <script>
+            "use strict";
+
+            // CONSOLE
+            console.log("--------CONSOLE--------");
+            console.log("Oi, za Warudo!");
+            console.error("Mado in Ohio!");
+            console.warn("Welcome to Ohio");
+            console.info("Can't have shit in Ohio!");
+            // alert("Es tut uns Leid Ihnen mitteilen zu müssen, dass Sie nun in Ohio sind.");
+            
+
+            // TEXT verändern
+            document.getElementById("mein-div").innerText = "NEUER TEXT";
+            document.write("<br>AAAAAAUUUUUGGHHH");
+
+
+            // Variablen
+            console.log("--------VARIABLEN--------");
+            let a;
+            var b;
+            const c = 5;
+            {
+                let a = 5;
+                b = 10;
+                console.log(a + b);
+                console.log(b);
+            }
+            console.log(a);
+            console.log(b);
+
+            var h = "X";
+            console.log(b + h);
+
+            var u = 0;
+            console.log(u);
+            u += 1;
+            console.log(u)
+            u -= 1;
+            console.log(u)
+
+
+            // Objekt
+            console.log("--------OBJEKT--------");
+            var i = { name:"Dado", alter:17 };
+            console.log(i.name);
+            console.log(i.alter);
+
+
+            // Array
+            console.log("--------ARRAY--------");
+            var j = [1,2,3,4,5];
+            console.log(j[1]);
+            j.push(18);
+            console.log(j[5]);
+            console.log(j[j.length - 1]);
+
+
+            // FUNKTIONEN
+            console.log("--------FUNKTIONEN--------");
+            function f1(x, y) {
+                console.log("f1" + x + y);
+            }
+            f1(3, 5);
+
+
+            // STRING
+            console.log("--------STRING--------");
+            var s = "Moneyboy\'s Orangensaft";
+            console.log(s);
+            // slice(start, end)
+            console.log(s.slice(0,8));
+            // substr(start, length)
+            console.log(s.substr(1,8));
+            // substring(start, end)
+            console.log(s.substring(0,8));
+
+            console.log(s.toUpperCase());
+            console.log(s.toLowerCase());
+
+            console.log(s.replace("Moneyboy", "Kim"));
+            console.log(s.indexOf("Orangensaft"));
+
+            let name = "Kevin";
+            let alter = 10;
+            console.log(`Hallo ${name} bist du ${alter} Jahre alt?`);
+
+
+            // TEMPLATE LITERALS
+            console.log("--------LITERALS--------");
+            let tags = ["Dado", "Justin", "Buggy", "Yunuss"];
+            for(let tag of tags) {
+                console.log(tag);
+            }
+
+            console.log(tags[0]);
+            console.log(tags.sort());
+            console.log(tags[0]);
+            console.log(tags.reverse());
+            console.log(tags[0]);
+
+            tags.forEach(element => {
+                console.log(element);
+            });
+
+            let cars = { car:"Nissan", model:"GTR r35", year: 2007};
+
+            Object.entries(cars).forEach(element => {
+                const [key, value] = element;
+                console.log(key, value);
+            });
+
+
+            // CALLBACK
+            console.log("--------CALLBACK--------");
+            function myDisplayer(some) {
+                console.log(some);
+            };
+            function myCalculator(num1, num2, myCallback) {
+                let sum = num1 + num2;
+                myCallback(sum);
+            }
+            myCalculator(5, 5, myDisplayer);
+
+
+
+        </script>
+
+    </body>
+
+</html>
