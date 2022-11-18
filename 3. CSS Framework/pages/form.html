@@ -1,0 +1,220 @@
+<h1>Formular</h1>
+
+<!-- TEXT INPUT -->
+<div class="row">
+
+    <div class="input-field col s6">
+        <i class="material-icons prefix">account_circle</i>
+        <input id="name" type="text">
+        <label for="name">Name</label>
+    </div>
+
+    <div class="input-field col s6">
+        <i class="material-icons prefix">account_circle</i>
+        <input id="vorname" type="text">
+        <label for="vorname">Vorname</label>
+    </div>
+
+</div>
+
+  <!-- TEXTAREA -->
+<div class="row">
+
+    <form class="col s12">
+        <div class="row">
+        <div class="input-field col s12">
+            <textarea id="textarea1" class="materialize-textarea"></textarea>
+            <label for="textarea1">Textfeld</label>
+        </div>
+        </div>
+    </form>
+
+</div>
+
+<!-- PICKER -->
+<div class="row">
+    
+    <!-- DATE PICKER -->
+    <div class="input-field col s4">
+        <i class="material-icons prefix">date_range</i>
+        <input id="datepicker" type="text">
+        <label for="datepicker">Datum Wählen</label>
+    </div>
+
+    <!-- TIME PICKER -->
+    <div class="input-field col s4">
+        <i class="material-icons prefix">access_time</i>
+        <input id="timepicker" type="text">
+        <label for="timepicker">Uhrzeit</label>
+    </div>
+
+    <!-- COLOR PICKER -->
+    <div class="input-field col s4">
+        <i class="material-icons prefix">color_lens</i>
+        <input type="color" id="colorpicker" value="#000000">
+    </div>
+
+</div>
+
+<!-- CHECKBOX -->
+<div class="row">
+    <div class="col s3">
+        <label>
+            <input id="cb1" type="checkbox" class="filled-in"/>
+            <span>Filled in</span>
+        </label>
+    </div>
+
+    <div class="col s3">
+        <label>
+            <input id="cb2" type="checkbox" class="filled-in"/>
+            <span>Filled in</span>
+        </label>
+    </div>
+
+    <div class="col s3">
+        <label>
+            <input id="cb3" type="checkbox" class="filled-in"/>
+            <span>Filled in</span>
+        </label>
+    </div>
+
+    <div class="col s3">
+        <label>
+            <input id="cb4" type="checkbox" class="filled-in"/>
+            <span>Filled in</span>
+        </label>
+    </div>
+
+</div>
+
+<!-- DROPDOWN -->
+
+<div class="row">
+    <div class="input-field col s6">
+        <!-- Dropdown Trigger -->
+        <!-- <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Dropdown!</a> -->
+        <input id="ddinput" type="text" class='dropdown-trigger btn' href='#' data-target='dropdown1'/>
+        <!-- Dropdown Structure -->
+        <ul id='dropdown1' class='dropdown-content'>
+        <li id="dd1"><a href="#!">one</a></li>
+        <li id="dd2"><a href="#!">two</a></li>
+        <li id="dd3"><a href="#!">three</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+  <style>
+
+    /* INPUT FIELD */
+    .modal-overlay
+    {
+        height: max-content;
+    }
+    .input-field input:focus+label
+    {
+        color: red !important;
+    }
+    .input-field input[type=text]:focus
+    {
+        border-bottom: 2px solid red !important;
+        -webkit-box-shadow: 0 2px 0 0 red !important;
+        -moz-box-shadow: 0 2px 0 0 red !important;
+        box-shadow: 0 2px 0 0 red !important;
+    }
+    .input-field .prefix.active
+    {
+        color: red !important;
+    } 
+
+    /* TEXTAREA */
+    .input-field #textarea1:focus+label
+    {
+        color: red !important;
+    }
+    .input-field #textarea1:focus
+    {
+        border-bottom: 2px solid red !important;
+        -webkit-box-shadow: 0 2px 0 0 red !important;
+        -moz-box-shadow: 0 2px 0 0 red !important;
+        box-shadow: 0 2px 0 0 red !important;
+    }
+
+    /* DATE PICKER */
+    .datepicker-date-display
+    {
+        background-color: red !important;
+    }
+    .btn-flat
+    {
+        color: red !important;
+    }
+    .datepicker-table td.is-selected {
+        background-color: red !important;
+    }
+    .datepicker-table td:focus {
+        background-color: red !important;
+    }
+    .datepicker-table td.is-today {
+        color: #ff6666 !important;
+    }
+    .datepicker-day-button:focus
+    {
+        background-color: #ff6666 !important;
+    }
+    .dropdown-content li>a, .dropdown-content li>span
+    {
+        color: red !important;
+    }
+
+    /* TIMEPICKER */
+    .timepicker-digital-display
+    {
+        background-color: red !important;
+    }
+    .timepicker-tick.active, .timepicker-tick:hover
+    {
+        background-color: #ff6666 !important;
+    }
+    .timepicker-canvas line
+    {
+        stroke: red !important;
+    }
+    .timepicker-canvas-bg
+    {
+        fill: red !important;
+    }
+    .timepicker-canvas-bearing
+    {
+        fill: red !important;
+    }
+
+    /* COLOR PICKER */
+    #colorpicker
+    {
+        margin-top: 7.5px !important;
+    }
+
+    /* CHECKBOX */
+    [type="checkbox"].filled-in:checked+span:not(.lever):after
+    {
+        background-color: red !important;
+        border: red !important;
+    }
+
+    .dropdown-trigger
+    {
+        color: black;
+    }
+    
+
+  </style>
+
+
+<button id="send" class="btn red" type="submit">
+    senden
+</button>
+

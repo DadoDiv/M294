@@ -3,7 +3,6 @@
         {
             "id" : 1,
             "name" : "Audi",
-            "price" : 52642,
             "kraftstoff" : "Diesel",
             "farbe" : "#00ffff",
             "bauart" : "Limousine",
@@ -13,7 +12,6 @@
         {
             "id" : 2,
             "name" : "Passat",
-            "price" : 546256,
             "kraftstoff" : "Benzin",
             "farbe" : "#000000",
             "bauart" : "Cabrio",

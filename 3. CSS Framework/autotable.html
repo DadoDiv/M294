@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Repetition</title>
+        <meta name="author" content="Divkovic Dado">
+        <meta name="publisher" content="Divkovic Dado">
+        <meta name="copyright" content="Divkovic Dado">
+        <meta name="description" content="Aufgabe vom üK im Modul 294">
+        <meta name="keywords" content="Modul, 294, üK, Heerbrugg, Aufgabe, Metatag">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+        <link rel="shortcut icon" href="./favicons/sped.ico" type="image/x-icon">
+        <!-- Compiled and minified CSS MATERIALIZECSS IMMER VOR INDEXCSS-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="./css/index.css">
+        <!-- JQUERY -->
+        <script src="./js/jQuery.js"></script>
+        <!-- Compiled and minified JavaScript MATERIALIZEJS IMMER ZWISCHEN JQUERY UND INDEXJS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- HANDLEBARS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" referrerpolicy="no-referrer"></script>
+        <!-- car.js -->
+        <script src="./js/car.js"></script>
+        
+    </head>
+    
+    <body>
+
+        <nav class="blue-grey darken-3">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Logo</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a href="#modal1" class="modal-trigger">
+                        <span id="add" class="material-icons red z-depth-2 rounded">
+                            add
+                        </span>
+                    </a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+
+        <script id="template" type="text/x-handlebars-template">
+            {{#each data}}
+                <tr data-id= {{id}}>
+                    <td>{{id}}<!-- -{{@key}}-{{this.id}}-{{@index}} --></td>
+                    <td>{{name}}</td>
+                    <td>{{kraftstoff}}</td>
+                    <td><span class="color" style="background-color: {{farbe}};"></span>{{farbe}}</td>
+                    <td>{{bauart}}</td>
+                    <td>{{tank}}</td>
+                    <td>{{date}}</td>
+                    <td><span class="material-icons blue-text tanke">
+                        directions_car_filled
+                        </span>
+                        <span class="material-icons green-text edit">
+                            edit
+                        </span>
+                        <span class="material-icons red-text delete">
+                            delete
+                        </span>
+                    </td>
+                </tr>
+
+            {{/each}}
+
+            {{#cars2}}
+                {{#.}}
+                    {{name}} <br>
+                {{/.}}
+            {{/cars2}}
+        </script>
+
+        <table id="table1" class="yellow lighten-3">
+            <thead class="amber">
+                <tr>
+                    <th>#</th>
+                    <th>name</th>
+                    <th>kraftstoff</th>
+                    <th>farbe</th>
+                    <th>bauart</th>
+                    <th>betankung</th>
+                    <th>mydate</th>
+                    <th>action</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+            <h4 id="mod_title"></h4>
+            <p id="mod_content"></p>
+            </div>
+        </div>
+        
+    </body>
+    
+    </html>
+    
+            <!-- <p class="deep-purple accent-1 deep-purple-text text-lighten-5">TEXT</p>
+            <hr>
+            <div class="row">
+                <div class="col col s6 offset-s3 m4 offset-m4 l2 offset-l5 deep-purple accent-2 deep-purple-text text-lighten-5 center z-depth-5">lol</div>
+                <div class="col s12"><hr></div>
+                <div class="col s12 m6 l2 deep-purple accent-1">1</div>
+                <div class="col s6 m4 l2 deep-purple accent-2">2</div>
+                <div class="col s6 m4 l2 deep-purple accent-3">3</div>
+                <div class="col s6 m4 l2 deep-purple accent-4">4</div>
+                <div class="col s6 m4 l2 deep-purple darken-1">5</div>
+                <div class="col s6 m4 l2 deep-purple darken-2">6</div>
+                <div class="col s6 m4 l2 deep-purple darken-3">7</div>
+                <div class="col s6 m4 l2 deep-purple darken-4">8</div>
+            </div> -->
