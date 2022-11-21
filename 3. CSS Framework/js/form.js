@@ -1,53 +1,54 @@
 console.log('form.js loaded');
+$('#datepicker').datepicker();
+$('#timepicker').timepicker();
+$('.dropdown-trigger').dropdown();
 
 $('#send').click(function (e) { 
     e.preventDefault();
-    console.log('senden');
-    // Feld lesen 
-    var name = $('#name').val();
+    // Feld lesen
     var vorname = $('#vorname').val();
+    var nachname = $('#nachname').val();
     var textarea = $('#textarea1').val();
     var datum = $('#datepicker').val();
     var zeit = $('#timepicker').val();
-    var farbe = $('#colorpicker').val();
-    console.log("Name: " + name);
+    var color = $('#colorpicker').val();
+    var cb1 = $('#cb1').val();
+    var cb2 = $('#cb2').val();
+    var cb3 = $('#cb3').val();
+    var cb4 = $('#cb4').val();
     console.log("Vorname: " + vorname);
+    console.log("Nachname: " + nachname);
     console.log("Textarea:\n" + textarea);
     console.log("Datum: " + datum);
-    console.log("Uhrzeit: " + zeit);
-    console.log("Farbe: " + farbe);
-    console.log("Box1 " + $('#cb1').is(":checked"));
-    console.log("Box2 " + $('#cb2').is(":checked"));
-    console.log("Box3 " + $('#cb3').is(":checked"));
-    console.log("Box4 " + $('#cb4').is(":checked"));
+    console.log("Zeit: " + zeit);
+    console.log("Farbe: " + color);
+    console.log("Checkbox1: " + $('#cb1').is(":checked"));
+    console.log("Checkbox2: " + $('#cb2').is(":checked"));
+    console.log("Checkbox3: " + $('#cb3').is(":checked"));
+    console.log("Checkbox4: " + $('#cb4').is(":checked"));
 });
 
-// Text Input
-$('#name').val('Bing');
-$('#vorname').val('Chilling');
-M.updateTextFields();
-
-// Picker
-$('#datepicker').datepicker();
-$('#timepicker').timepicker();
-
-// Dropdown
-$('.dropdown-trigger').dropdown();
-
-$('#click1').click(function (e) { 
+$('#dd1').click(function (e) { 
     e.preventDefault();
-    $('#ddinput').val($('#click1').text());
-    M.updateTextFields();
+    $('#ddinput').val($('#dd1').text());
 });
 
-$('#click2').click(function (e) { 
+$('#dd2').click(function (e) { 
     e.preventDefault();
-    $('#ddinput').val($('#click2').text());
-    M.updateTextFields();
+    $('#ddinput').val($('#dd2').text());
 });
 
-$('#click3').click(function (e) { 
+$('#dd3').click(function (e) { 
     e.preventDefault();
-    $('#ddinput').val($('#click3').text()); 
-    M.updateTextFields();
+    $('#ddinput').val($('#dd3').text());
+    
 });
+// Feld schreiben
+// $('#vorname').val('Testwert'); //Setzt Standardwert
+// $('#vorname').addClass("valid"); //Macht das Feld grün Unterstrichen
+
+M.updateTextFields(); // Zum updaten
+
+// Textarea
+// $('#textarea1').val('New Text');
+// M.textareaAutoResize($('#textarea1'));

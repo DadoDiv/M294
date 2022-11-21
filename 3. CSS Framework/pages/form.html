@@ -1,25 +1,23 @@
+<!-- Kein Doctype oder JavaScript oder sonstiges nur HTML Code -->
 <h1>Formular</h1>
 
-<!-- TEXT INPUT -->
+<!-- <input type="text" name="name" id="name"> -->
+
 <div class="row">
-
     <div class="input-field col s6">
-        <i class="material-icons prefix">account_circle</i>
-        <input id="name" type="text">
-        <label for="name">Name</label>
+      <i class="material-icons prefix">account_circle</i>
+      <input id="vorname" type="text">
+      <label for="vorname">First Name</label>
     </div>
-
     <div class="input-field col s6">
-        <i class="material-icons prefix">account_circle</i>
-        <input id="vorname" type="text">
-        <label for="vorname">Vorname</label>
-    </div>
-
+      <i class="material-icons prefix">account_circle</i>
+      <input id="nachname" type="text">
+      <label for="nachname">Last Name</label>
+      </div>
 </div>
 
-  <!-- TEXTAREA -->
+  <!-- Textarea -->
 <div class="row">
-
     <form class="col s12">
         <div class="row">
         <div class="input-field col s12">
@@ -28,67 +26,60 @@
         </div>
         </div>
     </form>
-
 </div>
 
-<!-- PICKER -->
+ 
+  <!-- Date Picker -->
 <div class="row">
-    
-    <!-- DATE PICKER -->
     <div class="input-field col s4">
         <i class="material-icons prefix">date_range</i>
         <input id="datepicker" type="text">
-        <label for="datepicker">Datum Wählen</label>
+        <label for="datepicker">Datum</label>
     </div>
 
-    <!-- TIME PICKER -->
+    <!-- Time Picker -->
     <div class="input-field col s4">
         <i class="material-icons prefix">access_time</i>
         <input id="timepicker" type="text">
         <label for="timepicker">Uhrzeit</label>
     </div>
 
-    <!-- COLOR PICKER -->
-    <div class="input-field col s4">
-        <i class="material-icons prefix">color_lens</i>
-        <input type="color" id="colorpicker" value="#000000">
+    <!-- Color Picker -->
+    <div class="row">
+        <div class="input-field col s4">
+            <i class="material-icons prefix">color_lens</i>
+            <input type="color" id="colorpicker" value="#0000ff">
+        </div>
     </div>
 
+    <!-- Checkbox -->
+    <div class="row">
+        <div class="input-field col s3">
+            <label>
+              <input id="cb1" type="checkbox" class="filled-in"/>
+              <span>Filled in</span>
+            </label>
+        </div>
+        <div class="input-field col s3">
+            <label>
+              <input id="cb2" type="checkbox" class="filled-in"/>
+              <span>Filled in</span>
+            </label>
+        </div>
+        <div class="input-field col s3">
+            <label>
+              <input id="cb3" type="checkbox" class="filled-in"/>
+              <span>Filled in</span>
+            </label>
+        </div>
+        <div class="input-field col s3">
+            <label>
+              <input id="cb4" type="checkbox" class="filled-in"/>
+              <span>Filled in</span>
+            </label>
+        </div>
+    </div>
 </div>
-
-<!-- CHECKBOX -->
-<div class="row">
-    <div class="col s3">
-        <label>
-            <input id="cb1" type="checkbox" class="filled-in"/>
-            <span>Filled in</span>
-        </label>
-    </div>
-
-    <div class="col s3">
-        <label>
-            <input id="cb2" type="checkbox" class="filled-in"/>
-            <span>Filled in</span>
-        </label>
-    </div>
-
-    <div class="col s3">
-        <label>
-            <input id="cb3" type="checkbox" class="filled-in"/>
-            <span>Filled in</span>
-        </label>
-    </div>
-
-    <div class="col s3">
-        <label>
-            <input id="cb4" type="checkbox" class="filled-in"/>
-            <span>Filled in</span>
-        </label>
-    </div>
-
-</div>
-
-<!-- DROPDOWN -->
 
 <div class="row">
     <div class="input-field col s6">
@@ -104,117 +95,140 @@
     </div>
 </div>
 
-
-
+<div class="row">
+    <div class="input-field col s6">
+        <form action="#">
+            <p>
+              <label>
+                <input name="group1" type="radio" checked />
+                <span>Red</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="group1" type="radio" />
+                <span>Yellow</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input class="with-gap" name="group1" type="radio"  />
+                <span>Green</span>
+              </label>
+            </p>
+            <p>
+                <p></p>
+              <label>
+                <input name="group1" type="radio" disabled="disabled" />
+                <span>Brown</span>
+              </label>
+            </p>
+          </form>
+    </div>
+</div>
 
   <style>
+/* Elements-->Styles-->Select an element (Ã¼ber styles)--> */
 
-    /* INPUT FIELD */
-    .modal-overlay
-    {
+    .modal-overlay {
         height: max-content;
     }
-    .input-field input:focus+label
-    {
+    /* Label - Text Farbe bei Focus bzw. Maus Hover */
+    .input-field input:focus+label {
         color: red !important;
     }
-    .input-field input[type=text]:focus
-    {
-        border-bottom: 2px solid red !important;
-        -webkit-box-shadow: 0 2px 0 0 red !important;
-        -moz-box-shadow: 0 2px 0 0 red !important;
-        box-shadow: 0 2px 0 0 red !important;
-    }
-    .input-field .prefix.active
-    {
-        color: red !important;
-    } 
 
-    /* TEXTAREA */
-    .input-field #textarea1:focus+label
-    {
-        color: red !important;
-    }
-    .input-field #textarea1:focus
-    {
+    /* Input Feld _ underline color bei Focus bzw. Maus Hover */
+    .input-field input[type=text]:focus {
         border-bottom: 2px solid red !important;
         -webkit-box-shadow: 0 2px 0 0 red !important;
         -moz-box-shadow: 0 2px 0 0 red !important;
         box-shadow: 0 2px 0 0 red !important;
     }
 
-    /* DATE PICKER */
-    .datepicker-date-display
-    {
+    /* ICON - Farbe bei active */
+    .input-field .prefix.active {
+        color: red !important;
+    }
+
+    .input-field #textarea1:focus{
+        border-bottom: 2px solid red !important;
+        -webkit-box-shadow: 0 2px 0 0 red !important;
+        -moz-box-shadow: 0 2px 0 0 red !important;
+        box-shadow: 0 2px 0 0 red !important;
+    }
+
+    .input-field #textarea1:focus+label {
+        color: red !important;
+    }
+
+    /* In Webansicht aus Element herausgelesen */
+    .datepicker-date-display {
         background-color: red !important;
     }
-    .btn-flat
-    {
+
+    .dropdown-content li>a, .dropdown-content li>span {
         color: red !important;
     }
+
     .datepicker-table td.is-selected {
-        background-color: red !important;
+    background-color: red !important;
     }
-    .datepicker-table td:focus {
-        background-color: red !important;
-    }
-    .datepicker-table td.is-today {
-        color: #ff6666 !important;
-    }
-    .datepicker-day-button:focus
-    {
-        background-color: #ff6666 !important;
-    }
-    .dropdown-content li>a, .dropdown-content li>span
-    {
+
+    .btn-flat {
         color: red !important;
     }
 
-    /* TIMEPICKER */
-    .timepicker-digital-display
-    {
-        background-color: red !important;
+    .datepicker-table td.is-today {
+        color: red !important;
     }
-    .timepicker-tick.active, .timepicker-tick:hover
-    {
+
+    .datepicker-day-button:focus {
         background-color: #ff6666 !important;
     }
-    .timepicker-canvas line
-    {
+
+
+    .timepicker-digital-display {
+        background-color: red !important;
+    }
+
+    /* .timepicker-analog-display > div.timepicker-plate >  */
+    .timepicker-tick.active, .timepicker-tick:hover {
+        background-color: #ff6666;
+    }
+
+    .timepicker-canvas line {
         stroke: red !important;
     }
-    .timepicker-canvas-bg
-    {
-        fill: red !important;
-    }
-    .timepicker-canvas-bearing
-    {
+
+    .timepicker-canvas-bg {
         fill: red !important;
     }
 
-    /* COLOR PICKER */
-    #colorpicker
-    {
-        margin-top: 7.5px !important;
+    .timepicker-canvas-bearing {
+        fill: red !important;
     }
 
-    /* CHECKBOX */
-    [type="checkbox"].filled-in:checked+span:not(.lever):after
-    {
+    #colorpicker {
+        margin-top: 7.5px;
+    }
+
+    [type="checkbox"].filled-in:checked+span:not(.lever):after {
         background-color: red !important;
         border: red !important;
     }
 
-    .dropdown-trigger
-    {
+    .dropdown-trigger{
         color: black;
     }
-    
 
+    [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+    background-color: red;
+    }
+
+    [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+    border: 2px solid red;
+    }    
   </style>
 
-
-<button id="send" class="btn red" type="submit">
-    senden
-</button>
-
+<button id="send" class="btn red" type="submit">senden</button>
