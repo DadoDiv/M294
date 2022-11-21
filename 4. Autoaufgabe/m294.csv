@@ -1,4 +1,4 @@
 id;name;kraftstoff;farbe;bauart;tank;date
-1;Opel;Diesel;white;SUV;35;2000-05-01
-2;VW;Benzin;red;PKW;35;2017-06-07
-3;Tesla;Elektro;black;Cybertruck;36;2022-10-27
+1;Opel;Diesel;#ffffff;SUV;36;2000-05-01
+2;Volkswagen;Benzin;#ff0000;Coupe;36;2017-06-07
+3;Tesla;Elektro;#000000;Sportwagen;36;2022-10-274;peter;Benzin;#ff0000;LKW;2;Nov 29, 2022

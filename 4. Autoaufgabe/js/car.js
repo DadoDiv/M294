@@ -50,6 +50,7 @@ $(function () {
 
 
 function showlist() {
+    console.log("test");
     // DOCUMENT READY
     var template = $('#template').html();
     var hb_template = Handlebars.compile(template);
@@ -94,6 +95,33 @@ function showlist() {
                 e.preventDefault();
                 var id = $(this).parent().parent().attr("data-id");
                 console.log("edit:" + id);
+                $('#mod_content').load("pages/form.html", function() {
+                    $.getScript("js/form.js");
+                    // Daten holen und Felder füllen
+                    $.getJSON("api.php?id=" + id, function (response) {
+                        $('#id').val(response.data[0].id);
+                        $('#id').addClass("valid");
+                        $('#name').val(response.data[0].name);
+                        $('#name').addClass("valid");
+                        $('#kraftstoff').val(response.data[0].kraftstoff);
+                        $('#kraftstoff').addClass("valid");
+                        $('#farbe').val(response.data[0].farbe);
+                        $('#farbe').addClass("valid");
+                        $('#bauart').val(response.data[0].bauart);
+                        $('#bauart').addClass("valid");
+                        $('#tank').val(response.data[0].tank);
+                        $('#tank').addClass("valid");
+                        $('#date').val(response.data[0].date);
+                        $('#date').addClass("valid");
+                        if (response.data[0].status == 'checked') {
+                            $('#status').prop("checked", true)
+                        }
+                        M.updateTextFields();
+                        $('select').formSelect();
+                    })
+                    var mymodal = M.Modal.getInstance($('.modal'));
+                    mymodal.open();
+                })
             });
             $('#table1 .delete').click(function (e) { 
                 e.preventDefault();

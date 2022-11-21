@@ -1,130 +1,88 @@
 <!-- Kein Doctype oder JavaScript oder sonstiges nur HTML Code -->
 <h1>Formular</h1>
 
-<!-- <input type="text" name="name" id="name"> -->
-
+<!-- ID -->
 <div class="row">
+
     <div class="input-field col s6">
-      <i class="material-icons prefix">account_circle</i>
-      <input id="vorname" type="text">
-      <label for="vorname">First Name</label>
+        <input id="id" type="number" readonly>
+        <label for="id">ID</label>
     </div>
-    <div class="input-field col s6">
-      <i class="material-icons prefix">account_circle</i>
-      <input id="nachname" type="text">
-      <label for="nachname">Last Name</label>
-      </div>
+
 </div>
 
-  <!-- Textarea -->
+<!-- TEXT INPUT -->
 <div class="row">
-    <form class="col s12">
-        <div class="row">
-        <div class="input-field col s12">
-            <textarea id="textarea1" class="materialize-textarea"></textarea>
-            <label for="textarea1">Textfeld</label>
-        </div>
-        </div>
-    </form>
-</div>
 
+    <div class="input-field col s6">
+        <input id="name" type="text">
+        <label for="name">Name</label>
+    </div>
+
+    <!-- SELECT KRAFTSTOFF -->
+    <div class="input-field col s6">
+        <select id="kraftstoff">
+          <option value="" disabled selected></option>
+          <option value="Benzin">Benzin</option>
+          <option value="Diesel">Diesel</option>
+          <option value="Elektro">Elektro</option>
+        </select>
+        <label>Kraftstoff</label>
+    </div>
+
+</div>
  
-  <!-- Date Picker -->
 <div class="row">
-    <div class="input-field col s4">
+
+    <!-- COLOR PICKER -->
+    <div class="input-field col s6">
+        <i class="material-icons prefix">color_lens</i>
+        <input type="color" id="farbe" value="#ff0000">
+    </div>
+
+    <!-- SELECT BAUART -->
+    <div class="input-field col s6">
+        <select id="bauart">
+          <option value="" disabled selected></option>
+          <option value="Coupe">Coupe</option>
+          <option value="Kombi">Kombi</option>
+          <option value="Limousine">Limousine</option>
+          <option value="Sportwagen">Sportwagen</option>
+          <option value="SUV">SUV</option>
+          <option value="LKW">LKW</option>
+          <option value="PKW">PKW</option>
+        </select>
+        <label>Bauart</label>
+      </div>
+
+</div>
+
+<div class="row">
+
+    <!-- NUMBER INPUT -->
+    <div class="input-field col s6">
+        <input id="tank" type="number" step="1" min="0" max="10000" value="0">
+        <label for="tank">Betankung</label>
+    </div>
+
+    <!-- DATE PICKER -->
+    <div class="input-field col s6">
         <i class="material-icons prefix">date_range</i>
-        <input id="datepicker" type="text">
-        <label for="datepicker">Datum</label>
+        <input id="date" type="text">
+        <label for="date">Datum</label>
     </div>
 
-    <!-- Time Picker -->
-    <div class="input-field col s4">
-        <i class="material-icons prefix">access_time</i>
-        <input id="timepicker" type="text">
-        <label for="timepicker">Uhrzeit</label>
-    </div>
-
-    <!-- Color Picker -->
-    <div class="row">
-        <div class="input-field col s4">
-            <i class="material-icons prefix">color_lens</i>
-            <input type="color" id="colorpicker" value="#0000ff">
-        </div>
-    </div>
-
-    <!-- Checkbox -->
-    <div class="row">
-        <div class="input-field col s3">
-            <label>
-              <input id="cb1" type="checkbox" class="filled-in"/>
-              <span>Filled in</span>
-            </label>
-        </div>
-        <div class="input-field col s3">
-            <label>
-              <input id="cb2" type="checkbox" class="filled-in"/>
-              <span>Filled in</span>
-            </label>
-        </div>
-        <div class="input-field col s3">
-            <label>
-              <input id="cb3" type="checkbox" class="filled-in"/>
-              <span>Filled in</span>
-            </label>
-        </div>
-        <div class="input-field col s3">
-            <label>
-              <input id="cb4" type="checkbox" class="filled-in"/>
-              <span>Filled in</span>
-            </label>
-        </div>
-    </div>
 </div>
 
 <div class="row">
-    <div class="input-field col s6">
-        <!-- Dropdown Trigger -->
-        <!-- <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Dropdown!</a> -->
-        <input id="ddinput" type="text" class='dropdown-trigger btn' href='#' data-target='dropdown1'/>
-        <!-- Dropdown Structure -->
-        <ul id='dropdown1' class='dropdown-content'>
-        <li id="dd1"><a href="#!">one</a></li>
-        <li id="dd2"><a href="#!">two</a></li>
-        <li id="dd3"><a href="#!">three</a></li>
-        </ul>
-    </div>
-</div>
 
-<div class="row">
-    <div class="input-field col s6">
-        <form action="#">
-            <p>
-              <label>
-                <input name="group1" type="radio" checked />
-                <span>Red</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input name="group1" type="radio" />
-                <span>Yellow</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input class="with-gap" name="group1" type="radio"  />
-                <span>Green</span>
-              </label>
-            </p>
-            <p>
-                <p></p>
-              <label>
-                <input name="group1" type="radio" disabled="disabled" />
-                <span>Brown</span>
-              </label>
-            </p>
-          </form>
+    <div class="input-field col s3">
+        <label>
+          <input id="status" type="checkbox" class="filled-in"/>
+          <span>ative</span>
+        </label>
     </div>
+
 </div>
 
   <style>
@@ -146,19 +104,15 @@
         box-shadow: 0 2px 0 0 red !important;
     }
 
-    /* ICON - Farbe bei active */
-    .input-field .prefix.active {
-        color: red !important;
-    }
-
-    .input-field #textarea1:focus{
+    .input-field input[type=number]:focus {
         border-bottom: 2px solid red !important;
         -webkit-box-shadow: 0 2px 0 0 red !important;
         -moz-box-shadow: 0 2px 0 0 red !important;
         box-shadow: 0 2px 0 0 red !important;
     }
 
-    .input-field #textarea1:focus+label {
+    /* ICON - Farbe bei active */
+    .input-field .prefix.active {
         color: red !important;
     }
 
@@ -187,48 +141,18 @@
         background-color: #ff6666 !important;
     }
 
-
-    .timepicker-digital-display {
-        background-color: red !important;
-    }
-
-    /* .timepicker-analog-display > div.timepicker-plate >  */
-    .timepicker-tick.active, .timepicker-tick:hover {
-        background-color: #ff6666;
-    }
-
-    .timepicker-canvas line {
-        stroke: red !important;
-    }
-
-    .timepicker-canvas-bg {
-        fill: red !important;
-    }
-
-    .timepicker-canvas-bearing {
-        fill: red !important;
-    }
-
     #colorpicker {
         margin-top: 7.5px;
     }
+
+    .dropdown-trigger{
+        color: black;
+    }   
 
     [type="checkbox"].filled-in:checked+span:not(.lever):after {
         background-color: red !important;
         border: red !important;
     }
-
-    .dropdown-trigger{
-        color: black;
-    }
-
-    [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
-    background-color: red;
-    }
-
-    [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
-    border: 2px solid red;
-    }    
   </style>
 
-<button id="send" class="btn red" type="submit">senden</button>
+<br><br><button id="send" class="btn red" type="submit">senden</button>
