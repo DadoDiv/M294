@@ -1,5 +1,9 @@
 <style>
     /* ------------------------------------------------------------------------ Ihr CSS - Style - Code */
+    input[type=range]::-webkit-slider-thumb
+    {
+        background: red;
+    }
 </style>
 
 <main>
@@ -27,7 +31,12 @@
             <td class="center">
                 <h6 class="red lighten-4">Ihre Lösung:</h6>
                 <!-- ------------------------------------------------------------------------ Ihr HTML - Code -->
-                
+                <form action="#">
+                    <p class="range-field">
+                        <input type="range" step="0.5" value="0" min="0" max="6" oninput="this.nextElementSibling.value = this.value">
+                        <output>0</output>
+                    </p>
+                </form>
             </td>
         </tr>
     </table>

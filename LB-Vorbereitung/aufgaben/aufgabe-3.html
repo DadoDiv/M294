@@ -24,8 +24,10 @@
             <td class="center">
                 <h6 class="red lighten-4">Ihre Lösung:</h6>
                 <!-- ------------------------------------------------------------------------ Ihr HTML - Code -->
-                <a href="http://20min.ch">Daten anzeigen</a>
-                <pre></pre>
+                <a id="link" href="http://20min.ch">Daten anzeigen</a>
+                <pre>
+                    
+                </pre>
             </td>
         </tr>
     </table>
@@ -33,6 +35,16 @@
 
 <script>
     /* ------------------------------------------------------------------------ Ihr JS - Code */
-
+    $('#link').click(function (e) { 
+        e.preventDefault();
+        $.ajax({
+            type: "GET",
+            url: "api.min.php",
+            dataType: "json",
+            success: function (response) {
+                $('pre').html(JSON.stringify(response.data, undefined, 4));
+            }
+        });
+    });
     
 </script>
