@@ -6,18 +6,6 @@ $('#send').click(function (e) {
     e.preventDefault();
     // Feld lesen
     var name = $('#name').val();
-    var kraftstoff = $('#kraftstoff').val();
-    var farbe = $('#farbe').val();
-    var bauart = $('#bauart').val();
-    var tank = $('#tank').val();
-    var date = $('#date').val();
-    console.log("Name: " + name);
-    console.log("Kraftstoff: " + kraftstoff);
-    console.log("Farbe: " + farbe);
-    console.log("Bauart: " + bauart);
-    console.log("Tank: " + tank);
-    console.log("Date: " + date);
-
 
     if (name.length < 3) {
         send = false;
@@ -42,7 +30,7 @@ $('#send').click(function (e) {
         },
         dataType: "json",
         success: function () {
-            var mymodal = M.Modal.getInstance($('.modal'));
+            var mymodal = M.Modal.getInstance($('#modal1'));
             mymodal.close();
             showlist();
         }

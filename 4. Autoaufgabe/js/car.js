@@ -1,6 +1,5 @@
 $(function () {
 
-    $('.modal').modal();
     // $.getJSON("api.php?id=1", function (response) {
     //     console.log(response);
     // })
@@ -20,16 +19,35 @@ $(function () {
     //         console.log(response)
     //     }
     // });
-
-
+        
+    $('.modal').modal();
 
     showlist();
+    
+    $('#logout').click(function (e) { 
+        e.preventDefault();
+        $.ajax({
+            type: "LOGOUT",
+            url: "api.php",
+            dataType: "json",
+            success: function (response) {
+                M.toast({ html: "Good bye, admin!", classes: "rounded red" });
+                console.log("kein admin");
+                $('#login').show();
+                $('#logout').hide();
+            }
+        });
+    });
 
-
+    $('#login').click(function (e) { 
+        e.preventDefault();
+        $('#mod_content2').load("pages/login-form.html", function(){
+            $.getScript("js/login-form.js");
+        });
+    });
 
     $("#add").click(function (e) { 
         e.preventDefault();
-        console.log("ADD...");
         $('#mod_content').load("pages/form.html", function(){
             $.getScript("js/form.js");
         });
@@ -50,7 +68,7 @@ $(function () {
 
 
 function showlist() {
-    console.log("test");
+    $('#logout').hide();
     // DOCUMENT READY
     var template = $('#template').html();
     var hb_template = Handlebars.compile(template);

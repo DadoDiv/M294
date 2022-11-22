@@ -34,16 +34,24 @@
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo">Logo</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li>
-                    <a href="#modal1" class="modal-trigger">
-                        <span id="add" class="material-icons red z-depth-2 rounded">
-                            add
-                        </span>
-                    </a>
-                </li>
-                </ul>
             </div>
         </nav>
+
+        <a href="#modal1" class="modal-trigger">
+            <span id="add" class="material-icons red white-text z-depth-2 rounded left" style="font-size: 60px; padding: 5px; margin: 5px;">
+                add
+            </span>
+        </a>
+
+        <span id="logout" class="material-icons blue white-text z-depth-2 rounded right" style="font-size: 60px; padding: 5px; margin: 5px;">
+            exit_to_app
+        </span>
+        
+        <a href="#modal2" class="modal-trigger">
+            <span id="login" class="material-icons green white-text z-depth-2 rounded right style=" style="font-size: 60px; padding: 5px; margin: 5px;">
+                key
+            </span>
+        </a>
 
         <script id="template" type="text/x-handlebars-template">
             {{#each data}}
@@ -100,6 +108,14 @@
             <div class="modal-content">
             <h4 id="mod_title"></h4>
             <p id="mod_content"></p>
+            </div>
+        </div>
+
+        <!-- Modal2 Structure -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+            <h4 id="mod_title2"></h4>
+            <p id="mod_content2"></p>
             </div>
         </div>
         
